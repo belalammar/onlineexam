@@ -835,8 +835,8 @@ ul.submenu-col li a:hover {
     <ul class="nav navbar-nav">
       <li class="active"><a href="#home">الصفحه الرئيسيه</a></li>
         <li><a href="home.html">الامتحانات</a></li>
-        <li><a href="#">المنتدي</a></li>
-        <li><a href="#contact"> طريقه الاستخدام</a></li>
+        <li><a href=""></a></li>
+        <li><a href="profile.php"> المستخدمين</a></li>
       </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="index.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
