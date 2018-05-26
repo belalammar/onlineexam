@@ -37,3 +37,4 @@ else    echo ("<br><ul class='menu'>" .
               <br>"     
         "<span class='info'>&#8658; You must be logged in to " .   
               "view this page.</span><br><br>"); ?>
+
