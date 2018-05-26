@@ -5,129 +5,189 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <style>
-  body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box}
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
+      <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+/* Navbar */
+.navbar{
+  min-height: 33px !important;
+  margin-bottom:0;
+  border-radius:0;
 }
 
-/* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
+.navbar-nav > li > a, .navbar-brand{
+  padding-top:6px !important;
+  padding-bottom:0 !important;
+  height: 33px;
+}
+
+.navbar-default {
+  background-color: #e74c3c;
+  border-color: #c0392b;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffbbbc;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffbbbc;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffbbbc;
+  background-color: #c0392b;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffbbbc;
+  background-color: #c0392b;
+}
+.navbar-default .navbar-toggle {
+  border-color: #c0392b;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #c0392b;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffbbbc;
+}
+
+/* Custom */
+.main-color-bg{
+  background-color: #e74c3c !important;
+  border-color: #c0392b !important;
+  color:#ffffff !important;
+}
+          /* Header */
+#header{
+  background:#333333;
+  color:#ffffff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+#header .create{
+  padding-top: 20px;
+}
+
+          
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
     outline: none;
 }
 
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
+.input-field:focus {
+    border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: dodgerblue;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 15px 20px;
     border: none;
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
 }
 
-button:hover {
-    opacity:1;
+.btn:hover {
+    opacity: 1;
+}
+          
+/* Footer */
+#footer{
+  background:#333333;
+  color:#ffffff;
+  text-align:center;
+  padding:30px;
+  margin-top:30px;
 }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-    padding: 14px 20px;
-    background-color: #f44336;
-}
 
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffbbbc;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffbbbc;
+    background-color: #c0392b;
+  }
 }
+</style></head>
 
-/* Add padding to container elements */
-.container {
-    padding: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
-    padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Style the horizontal ruler */
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-}
- 
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-    color: #f44336;
-    cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
-       width: 100%;
-    }
-}
-</style>
-</head>
 <body>
-<br>
-<br>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-12">
-			 <div class="panel panel-danger">
-				  <div class="panel-heading"> الامتحانات عبر الانترنت </div>
-				 
-		</div>
-    </div>
-</div>
+ <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">online exam</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center"> Admin  <small> online exam</small></h1>
+          </div>
+        </div>
+      </div>
+    </header>
 
 
 
@@ -136,7 +196,7 @@ hr {
 		<div class="row">
 			     <div class="col-sm-6">
 					  <div class="panel panel-info">
-                      <div class="panel-heading"> تسجيل الدخول </div>
+                      <div class="panel-heading"> ادخل مايلي </div>
 						<div class="panel-body">
 						<?php
 						if(isset($_GET['run'])  && $_GET['run']=="failed")
@@ -146,32 +206,25 @@ hr {
 						
 						
 						?>
-      <form role="form" action="home.php" method="post">
-							  
-							  <div class="container">
-    <label for="uname"><b> الاسم </b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b> الباسورد </b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit"> دخول </button>
-    <label>
-      <input type="checkbox" checked="checked" name="تذكر"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn"> الغاء </button>
-    <span class="psw">نسيت  <a href="#">كلمه  السر ?</a></span>
-  </div>
-</form>
-							  
-								
+							  <form role="form" action="signin_sub.php" method="post">
+								<div class="form-group">
+								  <label for="email"> الايميل  :</label>
+								  <input type="email" class="form-control" name="e" id="email" placeholder="  ادخل الايميل">
+								</div>
+								<div class="form-group">
+								  <label for="pwd">  الباسورد :</label>
+								  <input type="password" class="form-control" name="p" id="pwd" placeholder=" ادخل الباسورد ">
+								</div>
+								<button type="submit" class="btn btn-default"> دخول </button>
+							  </form>
+						  </div>
+						  </div>
+					  </div>
+				 
 				   <div class="col-sm-6">
 							<div class="panel panel-info">
 								
-								<div class="panel-heading"> تسجيل الخروج </div>
+								<div class="panel-heading"> سجل دخولك </div>
 							<div class="panel-body">
 							<?php 
 							if(isset($_GET['run'])&& $_GET['run']=="success")
@@ -182,32 +235,36 @@ hr {
 							  <form role="form" method="post" action="signup_sub.php" enctype="multipart/form-data"  >
 							  	<div class="form-group">
 								  <label for="name"> الاسم :</label>
-								  <input type="text" class="form-control" name="n" id="name" placeholder="Enter name">
+								  <input type="text" class="form-control" name="n" id="name" placeholder=" ادخل الاسم ">
 								</div>
 								<div class="form-group">
-								  <label for="email">الايميل  :</label>;
-								  <input type="email" class="form-control" name="e" id="email" placeholder="Enter email">
+								  <label for="email">الايميل:</label>;
+								  <input type="email" class="form-control" name="e" id="email" placeholder="ادخل الايميل ">
 								</div>
 								<div class="form-group">
-								  <label for="pwd">الباسورد :</label>
+								  <label for="pwd">الباسورد:</label>
 								  <input type="password" class="form-control" name="p" id="pwd" placeholder="Enter password">
 								</div>
 								<div class="form-group">
-								  <label for="pwd"> رفع  صوره  لك </label>
+								  <label for="pwd"> ارفع صورتك من فضلك</label>
 								  <input type="file" class="form-control" name="img" >
 								</div>
-								<button type="submit" class="btn ظ">
-								    دخول 
-								</button>
+								<button type="submit" class="btn btn-default">  الدخول </button>
 							  </form>
 						  </div>
 						  </div>
 			      </div>
 	   </div>
-    </div>
-            </div></div></div></div>
+   </div>
+
+    <footer id="footer">
+      <p>Copyright AdminStrap, &copy; 2017</p>
+    </footer>
+
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        
 </body>
 </html>
+
