@@ -4,7 +4,7 @@ class users{
 	public $host="localhost";
 	public $username="root";
 	public $pass="";
-	public $db_name="quiz_oops";
+	public $db_name="quiz";
 	public $conn;
 	public $data;
 	public $cat;
@@ -114,3 +114,6 @@ class users{
 
 
 ?>
+     
+    
+    
