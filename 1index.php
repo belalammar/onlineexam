@@ -206,7 +206,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 						
 						
 						?>
-							  <form role="form" action="signin_sub.php" method="post">
+							  <form role="form" action="home.php" method="post">
 								<div class="form-group">
 								  <label for="email"> الايميل  :</label>
 								  <input type="email" class="form-control" name="e" id="email" placeholder="  ادخل الايميل">
@@ -232,7 +232,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 								echo "<mark>Your registration successfully done</mark>";
 							} 
 							?>
-							  <form role="form" method="post" action="signup_sub.php" enctype="multipart/form-data"  >
+							  <form role="form" method="post" action="home.php" enctype="multipart/form-data"  >
 							  	<div class="form-group">
 								  <label for="name"> الاسم :</label>
 								  <input type="text" class="form-control" name="n" id="name" placeholder=" ادخل الاسم ">
