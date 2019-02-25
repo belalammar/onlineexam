@@ -1,6 +1,6 @@
 
 
--- Database: `quiz`
+-- Database: `online-exam`
 --
 
 -- --------------------------------------------------------
@@ -12,7 +12,7 @@
 CREATE TABLE `category` (
   `id` int(4) NOT NULL,
   `cat_name` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf-8;
+);
 
 --
 -- Dumping data for table `category`
@@ -41,7 +41,7 @@ CREATE TABLE `questions` (
   `ans4` varchar(80) NOT NULL,
   `ans` int(4) NOT NULL,
   `cat_id` int(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf-8;
+);
 
 --
 -- Dumping data for table `questions`
@@ -56,6 +56,19 @@ INSERT INTO `questions` (`id`, `question`, `ans1`, `ans2`, `ans3`, `ans4`, `ans`
 (6, 'All variables in PHP start with which symbol?', '@', '%', '$', '&amp;', 2, 1),
 (7, '', '', '', '', '', 0, 0),
 (8, 'What is the correct way to end a PHP statement?', '.', ';', 'new line', '&lt;php&gt;', 1, 1);
+(9, ' What does PHP stand for?', 'PHP: Hypertext Preprocessor', 'Private Home Page', 'Personal Hypertext Processor', 'none of them', 0, 1),
+
+(10, 'What is the correct way to end a PHP statement?', '.', ';', 'new line', '&lt;php&gt;', 1, 1);
+
+(11, ' What does PHP stand for?', 'PHP: Hypertext Preprocessor', 'Private Home Page', 'Personal Hypertext Processor', 'none of them', 0, 1),
+(12, 'How do you write "Hello World" in PHP', 'echo "Hello World";', '"Hello World";', ' Document.Write("Hello World");', 'none of them', 0, 1),
+(13, ' The PHP syntax is most similar to:', 'Perl and C', 'VBScript', 'JavaScript', 'none of them', 0, 1),
+(14, 'When using the POST method, variables are displayed in the URL:', 'true', 'false', 'none of them', 'return 1', 1, 1),
+(15, 'PHP server scripts are surrounded by delimiters, which?', '&lt;?php...?&gt;', '&lt;?php&gt;...&lt;/?&gt;', '&lt;&amp;&gt;...&lt;/&amp;&gt;', '&lt;script&gt;...&lt;/script&gt;', 0, 1),
+(16, 'All variables in PHP start with which symbol?', '@', '%', '$', '&amp;', 2, 1),
+(17, '', '', '', '', '', 0, 0),
+(18, 'What is the correct way to end a PHP statement?', '.', ';', 'new line', '&lt;php&gt;', 1, 1);
+
 
 -- --------------------------------------------------------
 
@@ -69,19 +82,15 @@ CREATE TABLE `signup` (
   `email` varchar(30) NOT NULL,
   `pass` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf-8;
+);
 
 --
 -- Dumping data for table `signup`
 --
 
 INSERT INTO `signup` (`id`, `name`, `email`, `pass`, `img`) VALUES
-(1, 'danish', 'dsaifi007@gmail.com', '1234', 'C:xampp	mpphpF0CB.tmp'),
-(5, 'aamir', 'amir123@gmail.com', '88264', 'C:xampp	mpphpC01D.tmp'),
-(6, 'aamir', 'dsaifi007@gmail.com', '88888', 'cricket-stadium.jpg'),
-(7, 'aamir', 'amir123@gmail.com', '888888', 'cricket-stadium.jpg'),
-(8, '', '', '', ''),
-(9, 'abcd', 'abcd@gmail.com', '123456', 'IMG_20160505_195500_HDR.jpg');
+(1, 'belal', 'me32219@gmail.com', '1234', 'bebo.jpeg');
+
 
 --
 -- Indexes for dumped tables
